@@ -3,6 +3,7 @@
 toDigits :: Integer -> [Integer]
 toDigitsRev :: Integer -> [Integer]
 doubleEveryOther :: [Integer] -> [Integer]
+sumDigits :: [Integer] -> Integer
 
 toDigits x
   | x <= 0 = []
@@ -17,6 +18,7 @@ doubleEveryOtherRev (x:y:zs) =
 
 doubleEveryOther x = (reverse (doubleEveryOtherRev (reverse x)))
 
-sumDigits x:xs
-  |x > 10 = sumDigits ((x `div` 10) : (x `mod` 10)) + sumDigits xs
+sumDigits [] = 0
+sumDigits (x:xs)  
+  |x >= 10 = sumDigits ((x `div` 10) : (x `mod` 10): []) + (sumDigits xs)
   |otherwise = x + sumDigits xs
