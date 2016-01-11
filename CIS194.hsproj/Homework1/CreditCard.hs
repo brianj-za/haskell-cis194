@@ -1,6 +1,6 @@
---Exersize 1 - Credit Card Vaildation
-module Homework1 where
+module Homework1.CreditCard where
 
+--Credit Card Validation
 toDigits :: Integer -> [Integer]
 toDigitsRev :: Integer -> [Integer]
 doubleEveryOther :: [Integer] -> [Integer]
