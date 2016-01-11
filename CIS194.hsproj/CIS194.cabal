@@ -42,7 +42,7 @@ Executable CIS194
   install-includes:
   include-dirs:
   hs-source-dirs:
-  other-modules:
+  other-modules: Homework1
   ghc-prof-options:
   ghc-shared-options:
   ghc-options:
